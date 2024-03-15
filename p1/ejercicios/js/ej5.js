@@ -5,7 +5,7 @@ function displayResult() {
         return
     }
 
-    const result = val * 2
+    const result = val ** 2
 
     document.querySelector('#result').innerHTML = result
     document.querySelector('#square').style.height = `${val}px`

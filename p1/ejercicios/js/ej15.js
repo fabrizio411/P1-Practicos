@@ -1,13 +1,15 @@
 let count = 0
 
 function acumular() {
-    const val = parseInt(document.querySelector('#val').value)
+    const val = document.querySelector('#val')
 
-    if (!val) {
+    if (!val.value) {
         return
     }
 
-    count += val
+    count += parseInt(val.value)
+
+    val.value = ''
 }
 
 function displayResult() {

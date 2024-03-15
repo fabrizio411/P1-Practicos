@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 5</title>
+  <link rel="stylesheet" href="../../css/resets.css">
+  <link rel="stylesheet" href="../../css/utils.css">
+  <link rel="stylesheet" href="../../css/forms.css">
+</head>
+<body class="center">
+
+  <form class="form">
+
+    <div class="input-container">
+      <input type="number" id="wins">
+      <label for="wins">Ganados</label>
+    </div>
+
+    <div class="input-container">
+      <input type="number" id="ties">
+      <label for="ties">Empatados</label>
+    </div>
+
+    <div class="input-container">
+      <input type="number" id="losses">
+      <label for="losses">Perdidos</label>
+    </div>
+
+    <button type="button" onclick="displayResult()" class="btn">Calcular Puntos</button>
+
+    <div class="center">
+      <p>Total Puntos:</p>
+      <p id="result" class="result"></p>
+    </div>
+
+  </form>
+  
+</body>
+<script src="../js/ej16.js"></script>
+</html>

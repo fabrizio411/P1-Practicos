@@ -1,0 +1,165 @@
+/* GLOBALS */
+body {
+    background-color: var(--general-bg);
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.main-container {
+    position: relative;
+    width: 600px;
+    padding: 2rem 3rem;
+    background-color: var(--bg);
+    box-shadow: 0 0.5rem 1rem var(--shadows);
+    border-radius: .5rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* FOOTER */
+.footer-txt {
+    font-size: .9rem;
+    color: var(--text-1);
+    font-weight: 500;
+
+    position: absolute;
+    bottom: -1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* HEADER */
+.nav {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.nav .home-icon {
+    padding: .3rem;
+}
+
+.nav .nav-btn {
+    transition: all .25s ease;
+    border-radius: 100%;
+    fill: var(--text-1);
+}
+
+.nav .nav-btn:hover {
+    fill: var(--text-2);
+    box-shadow: 0 0.5rem 1rem var(--shadows);
+}
+
+/* PAGE */
+.page-container {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--text-1);
+}
+
+.subtext {
+    margin-top: .25rem;
+    color: var(--text-3);
+    font-size: .9rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img {
+    height: 2rem;
+    width: auto;
+}
+
+.topic {
+    margin-top: 1rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--text-1);
+}
+
+.hr-bar {
+    margin: 1rem 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--clr-hr);
+}
+
+/* MAIN PAGE */
+.subtitle {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--text-1);
+}
+
+.exercises-display {
+    margin-top: 1rem;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.exercise {
+    transition: scale .25s ease;
+    width: 100%;
+    padding: .55rem 0;
+    background-color: var(--clr-1);
+    border-radius: .25rem;
+    text-align: center;
+    text-decoration: none;
+    color: var(--text-3);
+    font-size: 500;
+}
+
+.exercise:hover {
+    color: var(--clr-4);
+    scale: 1.05;
+}
+
+/* EXERCISES PAGES */
+.workboard {
+    flex: 1;
+    width: 100%;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.link-toOriginal {
+    margin-top: .5rem;
+    font-size: .95rem;
+    color: var(--clr-4);
+}
+
+.link-toOriginal:visited {
+    color: var(--clr-4);
+}
+
+.link-toOriginal:hover {
+    color: var(--clr-2);
+}
+
+
+/* Extras */
+pre {
+    align-self: flex-start;
+    text-align: left;
+}

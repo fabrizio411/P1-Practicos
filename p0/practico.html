@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Práctico 0</title>
+  <link rel="stylesheet" href="./css/resets.css">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+  <div class="main-container">
+    <header class="nav">
+      <div onclick="prevEj()" class="nav-btn" id="prev">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"><path d="M12.707 17.293 8.414 13H18v-2H8.414l4.293-4.293-1.414-1.414L4.586 12l6.707 6.707z"></path></svg>
+      </div>
+      <a class="nav-btn home-icon" href="../index.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path d="M12.71 2.29a1 1 0 0 0-1.42 0l-9 9a1 1 0 0 0 0 1.42A1 1 0 0 0 3 13h1v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7h1a1 1 0 0 0 1-1 1 1 0 0 0-.29-.71zM6 20v-9.59l6-6 6 6V20z"></path></svg>
+      </a>
+      <div onclick="nextEj()" class="nav-btn" id="next">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"><path d="m11.293 17.293 1.414 1.414L19.414 12l-6.707-6.707-1.414 1.414L15.586 11H6v2h9.586z"></path></svg>
+      </div>
+    </header>
+
+    <main class="page-container">
+      <h1 class="page-title">Ejercicio <span id="ej-num"></span></h1>
+      <p id="letra" class="subtext"></p>
+
+      <div class="hr-bar"></div>
+
+      <div class="workboard">
+
+        <iframe id="iframe" src="" frameborder="0"></iframe>
+        
+      </div>
+
+      <a class="link-toOriginal" target="_blank" id="link-toOriginal">Ver Pagina Original</a>
+    </main>
+
+    <footer>
+      <p class="footer-txt">Fabrizio Mourglia - ORT - Grupo M1A</p>
+    </footer>
+  </div>
+  
+</body>
+<script src="./js/letra_ejercicios.js"></script>
+<script src="./js/practicohelper.js"></script>
+</html>

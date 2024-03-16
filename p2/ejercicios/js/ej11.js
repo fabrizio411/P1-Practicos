@@ -1,13 +1,23 @@
-const IVA = 22
-
 function displayResult() {
-    const importe = parseInt(document.querySelector('#importe').value)
+    const val1 = parseInt(document.querySelector('#val1').value)
+    const val2 = parseInt(document.querySelector('#val2').value)
+    const operacion = document.querySelector('#operacion').value
+    
 
-    if (!importe) {
+    if (!val1 || !val2 || !operacion) {
         return
     }
 
-    const result = importe + (IVA * importe / 100)
+    let result = val1
+    if (operacion === 's') {
+        result += val2
+    } else if (operacion === 'r') {
+        result -= val2
+    } else if (operacion === 'm') {
+        result *= val2
+    } else if (operacion === 'd') {
+        result = (result / val2).toFixed(1)
+    }
 
     document.querySelector('#result').innerHTML = result
 }

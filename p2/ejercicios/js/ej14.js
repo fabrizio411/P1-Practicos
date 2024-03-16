@@ -1,7 +1,24 @@
-let counter = 0
+function displayResult() {
+    const millas = parseInt(document.querySelector('#millas').value)
+    const clPlus = document.querySelector('#clPlus').value
 
-function incrementar() {
-    counter += 3
+    if (!millas || !clPlus) {
+        return
+    }
 
-    document.querySelector('#result').innerHTML = counter
+    let totalMillas = millas
+    if (clPlus === 's') {
+        totalMillas *= 2
+    }
+
+    let result = 'Millas insuficientes para viajar'
+    if (totalMillas > 60000) {
+        result = 'Europa'
+    } else if (totalMillas > 30000) {
+        result = 'América del Norte'
+    } else if (totalMillas > 15000) {
+        result = 'América del Sur'
+    }
+    
+    document.querySelector('#result').innerHTML = result
 }

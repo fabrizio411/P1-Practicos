@@ -9,3 +9,7 @@
     flex-direction: row;
     gap: 2rem;
 }
+
+.margins {
+    margin: 1rem 0;
+}

@@ -1,12 +1,14 @@
 function displayResult() {
-    const val1 = parseInt(document.querySelector('#val1').value)
-    const val2 = parseInt(document.querySelector('#val2').value)
+    const val = parseInt(document.querySelector('#val').value)
 
-    if (!val1 || !val2) {
+    if (!val) {
         return
     }
 
-    const result = (val1 / val2).toFixed(2)
+    let result = 'NO CUMPLE'
+    if (val < -20 || val > 20) {
+        result = 'CUMPLE'
+    }
 
     document.querySelector('#result').innerHTML = result
 }

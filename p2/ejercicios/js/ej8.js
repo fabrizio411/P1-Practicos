@@ -1,13 +1,16 @@
 function displayResult() {
-    const val1 = parseInt(document.querySelector('#val1').value)
-    const val2 = parseInt(document.querySelector('#val2').value)
-    const val3 = parseInt(document.querySelector('#val3').value)
+    const val = parseInt(document.querySelector('#val').value)
 
-    if (!val1 || !val2 || !val3) {
+    if (!val) {
         return
     }
 
-    const result = val1 + val2 - val3
+    let result = 'Entre 10 y 30'
+    if (val > 30) {
+        result = 'Mayor que 30'
+    } else if (val < 10) {
+        result = 'Menor a 10'
+    }
 
     document.querySelector('#result').innerHTML = result
 }

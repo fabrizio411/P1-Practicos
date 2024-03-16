@@ -1,12 +1,14 @@
 function displayResult() {
-    const weight = parseFloat(document.querySelector('#weight').value)
-    const height = parseFloat(document.querySelector('#height').value)
+    const char = document.querySelector('#char').value
 
-    if (!weight || !height) {
+    if (!char) {
         return
     }
 
-    const result = (weight / (height ** 2)).toFixed(1)
+    let result = 'No'
+    if ('aeiou'.includes(char)) {
+        result = 'Si'
+    }
 
     document.querySelector('#result').innerHTML = result
 }

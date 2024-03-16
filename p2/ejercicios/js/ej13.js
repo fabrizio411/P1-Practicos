@@ -1,7 +1,15 @@
-let counter = 0
+function displayResult() {
+    const val1 = parseInt(document.querySelector('#val1').value)
+    const val2 = parseInt(document.querySelector('#val2').value)
 
-function incrementar() {
-    counter++
+    if (!val1 || !val2) {
+        return
+    }
 
-    document.querySelector('#result').innerHTML = counter
+    let result = `${val1} NO es múltiplo de ${val2}`
+    if (val1 % val2 === 0) {
+        result = `${val1} es múltiplo de ${val2}`
+    }
+
+    document.querySelector('#result').innerHTML = result
 }

@@ -1,12 +1,15 @@
 function displayResult() {
-    const importe = parseInt(document.querySelector('#importe').value)
-    const recargo = parseInt(document.querySelector('#recargo').value)
+    const val1 = parseInt(document.querySelector('#val1').value)
+    const val2 = parseInt(document.querySelector('#val2').value)
 
-    if (!importe || !recargo) {
+    if (!val1 || !val2) {
         return
     }
 
-    const result = importe + (recargo * importe / 100)
+    let result = val1 - val2
+    if (val1 < val2) {
+        result = val2 - val2
+    }
 
     document.querySelector('#result').innerHTML = result
 }

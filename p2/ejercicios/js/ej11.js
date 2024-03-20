@@ -1,7 +1,13 @@
+document.querySelector('#btn').addEventListener('click', displayResult)
+
 function displayResult() {
-    const val1 = parseInt(document.querySelector('#val1').value)
-    const val2 = parseInt(document.querySelector('#val2').value)
-    const operacion = document.querySelector('#operacion').value
+    let val1 = Number(document.querySelector('#val1').value)
+    let val2 = Number(document.querySelector('#val2').value)
+    let operacion = document.querySelector('#operacion').value
+
+    document.querySelector('#val1').value = ''
+    document.querySelector('#val2').value = ''
+    document.querySelector('#operacion').value = ''
     
 
     if (!val1 || !val2 || !operacion) {
@@ -16,7 +22,8 @@ function displayResult() {
     } else if (operacion === 'm') {
         result *= val2
     } else if (operacion === 'd') {
-        result = (result / val2).toFixed(1)
+        // Redondear
+        result = result / val2
     }
 
     document.querySelector('#result').innerHTML = result

@@ -1,12 +1,19 @@
-function displayResult() {
-    const wins = parseInt(document.querySelector('#wins').value)
-    const ties = parseInt(document.querySelector('#ties').value)
+document.querySelector('#btn').addEventListener('click', displayResult)
 
-    if (!wins || !ties) {
+function displayResult() {
+    let a = Number(document.querySelector("#a").value)
+    let b = Number(document.querySelector("#b").value)
+    let c = Number(document.querySelector("#c").value)
+
+    document.querySelector("#a").value = ''
+    document.querySelector("#b").value = ''
+    document.querySelector("#c").value = ''
+    
+    if (!a || !b || !c) {
         return
     }
 
-    const result = wins * 3 + ties
-
-    document.querySelector('#result').innerHTML = result
+    if (a > b && a > c) {
+        document.querySelector('#result').innerHTML = "A es el mayor de todos"
+    }
 }

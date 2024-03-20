@@ -1,5 +1,9 @@
+document.querySelector('#btn').addEventListener('click', displayResult)
+
 function displayResult() {
-    const val = parseInt(document.querySelector('#val').value)
+    let val = number(document.querySelector('#val').value)
+
+    document.querySelector('#val').value = ''
 
     if (!val) {
         return

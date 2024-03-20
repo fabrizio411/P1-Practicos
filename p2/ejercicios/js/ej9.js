@@ -1,8 +1,11 @@
-function displayResult() {
-    const day = document.querySelector('#day').value
-    const temp = parseInt(document.querySelector('#temp').value)
+document.querySelector('#btn').addEventListener('click', displayResult)
 
-    console.log(day)
+function displayResult() {
+    let day = document.querySelector('#day').value
+    let temp = Number(document.querySelector('#temp').value)
+
+    document.querySelector('#day').value = ''
+    document.querySelector('#temp').value = ''
 
     if (!day || !temp) {
         return

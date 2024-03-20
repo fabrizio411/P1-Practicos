@@ -1,11 +1,16 @@
+document.querySelector('#btn').addEventListener('click', displayResult)
+
 function displayResult() {
-    const char = document.querySelector('#char').value
+    let char = document.querySelector('#char').value
+
+    document.querySelector('#char').value = ''
 
     if (!char) {
         return
     }
 
     let result = 'No'
+    // Revisar si se hace asi
     if ('aeiou'.includes(char)) {
         result = 'Si'
     }

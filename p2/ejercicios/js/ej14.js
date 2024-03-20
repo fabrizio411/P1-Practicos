@@ -1,6 +1,11 @@
+document.querySelector('#btn').addEventListener('click', displayResult)
+
 function displayResult() {
-    const millas = parseInt(document.querySelector('#millas').value)
-    const clPlus = document.querySelector('#clPlus').value
+    let millas = Number(document.querySelector('#millas').value)
+    let clPlus = document.querySelector('#clPlus').value
+
+    document.querySelector('#millas').value = ''
+    document.querySelector('#clPlus').value = ''
 
     if (!millas || !clPlus) {
         return

@@ -1,14 +1,15 @@
-function displayResult() {
-    const chPerMin = parseInt(document.querySelector('#chPerMin').value)
+document.querySelector('#btn').addEventListener('click', displayResult)
 
-    if (!chPerMin) {
+function displayResult() {
+    let a = Number(document.querySelector("#a").value)
+
+    document.querySelector("#a").value = ''
+    
+    if (!a) {
         return
     }
 
-    const tempF = (50 + ((chPerMin - 40) / 4)).toFixed(1)
-    const tempC = ((tempF - 32) / 1.8).toFixed(1)
-    const tempC_direct = (10 + ((chPerMin - 40) / 7)).toFixed(1)
-
-    document.querySelector('#resultF').innerHTML = tempF
-    document.querySelector('#resultC').innerHTML = tempC
+    if (!(a >= 0 && a <= 10)) {
+        document.querySelector('#result').innerHTML = "A está fuera de rango"
+    }
 }

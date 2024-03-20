@@ -1,15 +1,14 @@
 let count = 0
 
+document.querySelector('#btnAcc').addEventListener('click', acumular)
+document.querySelector('#btnResult').addEventListener('click', displayResult)
+
 function acumular() {
-    const val = document.querySelector('#val')
+    const val = Number(document.querySelector('#val').value)
 
-    if (!val.value) {
-        return
-    }
+    document.querySelector('#val').value = ''
 
-    count += parseInt(val.value)
-
-    val.value = ''
+    count += val
 }
 
 function displayResult() {

@@ -1,13 +1,13 @@
-const IVA = 22
+let IVA = 22
+
+document.querySelector('#btn').addEventListener('click', displayResult)
 
 function displayResult() {
-    const importe = parseInt(document.querySelector('#importe').value)
+    let importe = Number(document.querySelector('#importe').value)
 
-    if (!importe) {
-        return
-    }
+    document.querySelector('#importe').value = ''
 
-    const result = importe + (IVA * importe / 100)
+    let result = importe + (IVA * importe / 100)
 
     document.querySelector('#result').innerHTML = result
 }

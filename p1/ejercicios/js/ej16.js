@@ -1,12 +1,13 @@
+document.querySelector('#btn').addEventListener('click', displayResult)
+
 function displayResult() {
-    const wins = parseInt(document.querySelector('#wins').value)
-    const ties = parseInt(document.querySelector('#ties').value)
+    let wins = Number(document.querySelector('#wins').value)
+    let ties = Number(document.querySelector('#ties').value)
 
-    if (!wins || !ties) {
-        return
-    }
+    document.querySelector('#wins').value = ''
+    document.querySelector('#ties').value = ''
 
-    const result = wins * 3 + ties
+    let result = wins * 3 + ties
 
     document.querySelector('#result').innerHTML = result
 }

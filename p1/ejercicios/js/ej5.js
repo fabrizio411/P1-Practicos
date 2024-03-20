@@ -1,11 +1,11 @@
+document.querySelector('#btn').addEventListener('click', displayResult)
+
 function displayResult() {
-    const val = parseInt(document.querySelector('#val').value)
+    let val = Number(document.querySelector('#val').value)
 
-    if (!val) {
-        return
-    }
+    document.querySelector('#val').value = ''
 
-    const result = val ** 2
+    let result = val ** 2
 
     document.querySelector('#result').innerHTML = result
     document.querySelector('#square').style.height = `${val}px`

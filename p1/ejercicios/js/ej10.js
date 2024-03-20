@@ -1,12 +1,13 @@
+document.querySelector('#btn').addEventListener('click', displayResult)
+
 function displayResult() {
-    const importe = parseInt(document.querySelector('#importe').value)
-    const recargo = parseInt(document.querySelector('#recargo').value)
+    let importe = Number(document.querySelector('#importe').value)
+    let recargo = Number(document.querySelector('#recargo').value)
 
-    if (!importe || !recargo) {
-        return
-    }
+    document.querySelector('#importe').value = ''
+    document.querySelector('#recargo').value = ''
 
-    const result = importe + (recargo * importe / 100)
+    let result = importe + (recargo * importe / 100)
 
     document.querySelector('#result').innerHTML = result
 }

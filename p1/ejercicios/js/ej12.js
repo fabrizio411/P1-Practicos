@@ -1,12 +1,13 @@
+document.querySelector('#btn').addEventListener('click', displayResult)
+
 function displayResult() {
-    const weight = parseFloat(document.querySelector('#weight').value)
-    const height = parseFloat(document.querySelector('#height').value)
+    let weight = Number(document.querySelector('#weight').value)
+    let height = Number(document.querySelector('#height').value)
 
-    if (!weight || !height) {
-        return
-    }
+    document.querySelector('#weight').value = ''
+    document.querySelector('#height').value = ''
 
-    const result = (weight / (height ** 2)).toFixed(1)
+    let result = weight / (height ** 2)
 
     document.querySelector('#result').innerHTML = result
 }

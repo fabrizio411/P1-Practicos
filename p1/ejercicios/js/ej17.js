@@ -1,13 +1,13 @@
+document.querySelector('#btn').addEventListener('click', displayResult)
+
 function displayResult() {
-    const chPerMin = parseInt(document.querySelector('#chPerMin').value)
+    let chPerMin = Number(document.querySelector('#chPerMin').value)
 
-    if (!chPerMin) {
-        return
-    }
+    document.querySelector('#chPerMin').value = ''
 
-    const tempF = (50 + ((chPerMin - 40) / 4)).toFixed(1)
-    const tempC = ((tempF - 32) / 1.8).toFixed(1)
-    const tempC_direct = (10 + ((chPerMin - 40) / 7)).toFixed(1)
+    let tempF = 50 + ((chPerMin - 40) / 4)
+    let tempC = (tempF - 32) / 1.8
+    let tempC_direct = 10 + ((chPerMin - 40) / 7)
 
     document.querySelector('#resultF').innerHTML = tempF
     document.querySelector('#resultC').innerHTML = tempC

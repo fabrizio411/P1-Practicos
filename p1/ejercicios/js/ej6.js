@@ -1,12 +1,13 @@
+document.querySelector('#btn').addEventListener('click', displayResult)
+
 function displayResult() {
-    const importe = parseInt(document.querySelector('#importe').value)
-    const cambio = parseFloat(document.querySelector('#cambio').value)
+    let importe = Number(document.querySelector('#importe').value)
+    let cambio = Number(document.querySelector('#cambio').value)
 
-    if (!importe || !cambio) {
-        return
-    }
+    document.querySelector('#importe').value = ''
+    document.querySelector('#cambio').value = ''
 
-    const result = (importe / cambio).toFixed(2)
+    let result = importe / cambio
 
     document.querySelector('#result').innerHTML = result
 }

@@ -48,6 +48,11 @@ input:focus, select:focus {
     border-color: var(--clr-4);
 }
 
+input:disabled {
+    cursor: not-allowed;
+    border-color: var(--clr-1);
+}
+
 input:focus + label, select:focus + label {
     top: -55%;
 }

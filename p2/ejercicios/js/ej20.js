@@ -11,6 +11,10 @@ function displayResult() {
     let userAceite = Number(document.querySelector("#aceite").value)
     let userAgua = Number(document.querySelector("#agua").value)
 
+    document.querySelector("#azucar").value = ''
+    document.querySelector("#harina").value = ''
+    document.querySelector("#aceite").value = ''
+    document.querySelector("#agua").value = ''
     
     if (!userAzucar || !userAceite || !userHarina || !userAgua) {
         return

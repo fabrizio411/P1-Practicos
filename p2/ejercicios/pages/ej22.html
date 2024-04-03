@@ -13,19 +13,28 @@
   <form class="form">
 
     <div class="input-container">
-      <input type="number" id="a">
-      <label for="a">Valor A</label>
+      <input type="number" id="montoTotal">
+      <label for="montoTotal">Monto total</label>
     </div>
 
-    <button type="button" id="btn" class="btn">Evaluar</button>
+    <div class="input-container">
+      <select id="targeta">
+        <option selected disabled value="">Elejir Opción...</option>
+        <option value="s">Si</option>
+        <option value="n">No</option>
+      </select>
+      <label for="targeta">Pago con Targeta</label>
+    </div>
+
+    <button type="button" id="btn" class="btn">Calcular</button>
 
     <div class="center">
-      <p>Resultado:</p>
+      <p>Costo final:</p>
       <p id="result" class="result"></p>
     </div>
 
   </form>
   
 </body>
-<script src="../js/ej17.js"></script>
+<script src="../js/ej22.js"></script>
 </html>

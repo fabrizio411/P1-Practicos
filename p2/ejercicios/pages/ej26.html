@@ -13,29 +13,26 @@
   <form class="form">
 
     <div class="input-container">
-      <input type="number" id="a">
-      <label for="a">Valor A</label>
+      <input type="number" id="noches">
+      <label for="noches">Noches a alojarse</label>
     </div>
 
     <div class="input-container">
-      <input type="number" id="b">
-      <label for="b">Valor B</label>
+      <select id="metodoPago">
+        <option selected disabled value="">Elejir Opción...</option>
+        <option value="e">Efectivo</option>
+        <option value="t">Targeta</option>
+      </select>
+      <label for="metodoPago">Método de pago</label>
     </div>
 
-    <div class="input-container">
-      <input type="number" id="c">
-      <label for="c">Valor C</label>
-    </div>
+    <button type="button" id="btn" class="btn">Ingresar</button>
 
-    <button type="button" id="btn" class="btn">Evaluar</button>
-
-    <div class="center">
-      <p>Resultado:</p>
-      <p id="result" class="result"></p>
+    <div class="center" id="result">
     </div>
 
   </form>
   
 </body>
-<script src="../js/ej16.js"></script>
+<script src="../js/ej26.js"></script>
 </html>

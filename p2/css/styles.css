@@ -44,13 +44,14 @@ body {
     padding: .3rem;
 }
 
-.nav .nav-btn {
+.nav-btn {
+    cursor: pointer;
     transition: all .25s ease;
     border-radius: 100%;
     fill: var(--text-1);
 }
 
-.nav .nav-btn:hover {
+.nav-btn:hover {
     fill: var(--text-2);
     box-shadow: 0 0.5rem 1rem var(--shadows);
 }
@@ -78,6 +79,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: max-height .1s ease;
 }
 
 img {
@@ -162,4 +164,25 @@ iframe {
 pre {
     align-self: flex-start;
     text-align: left;
+}
+
+.letra-box {
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.nav-btn.more-btn {
+    height: fit-content;
+    box-shadow: 0 0 0 #FFF;
+}
+
+.more-btn.active {
+    rotate: 180deg;
+}
+
+.more-btn:hover {
+    background-color: #f0f0f0;
 }

@@ -78,6 +78,10 @@ input:focus + label, select:focus + label {
     background-color: var(--clr-0);
 }
 
+.btn:disabled {
+    cursor: not-allowed;
+}
+
 .result {
     font-weight: bold;
     font-size: 1.3rem;

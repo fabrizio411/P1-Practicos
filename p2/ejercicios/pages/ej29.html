@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../../css/resets.css">
+  <link rel="stylesheet" href="../../css/utils.css">
+  <link rel="stylesheet" href="../css/ej29-30.css">
+</head>
+
+<body>
+  <div class="game-container">
+
+    <div id="menu" class="menu">
+      <h1 class="title">TaTeTi</h1>
+      <p id="winner" class="winner"></p>
+      <div class="buttons">
+        <button onclick="startGame()">Jugar</button>
+      </div>
+    </div>
+
+    <div id="board" class="grid" >
+      <!-- Fila 1 -->
+      <div onclick="placePiece(this, 0)" class="sq"></div>
+      <div onclick="placePiece(this, 1)" class="sq"></div>
+      <div onclick="placePiece(this, 2)" class="sq"></div>
+      <!-- Fila 2 -->
+      <div onclick="placePiece(this, 3)" class="sq"></div>
+      <div onclick="placePiece(this, 4)" class="sq"></div>
+      <div onclick="placePiece(this, 5)" class="sq"></div>
+      <!-- Fila 3 -->
+      <div onclick="placePiece(this, 6)" class="sq"></div>
+      <div onclick="placePiece(this, 7)" class="sq"></div>
+      <div onclick="placePiece(this, 8)" class="sq"></div>
+    </div>
+  </div>
+</body>
+<script src="../js/ej29.js"></script>
+
+</html>
+

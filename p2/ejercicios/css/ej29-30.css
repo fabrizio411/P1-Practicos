@@ -1,0 +1,144 @@
+body {
+    display: grid;
+    place-items: center;
+}
+
+
+/* JUEGO */
+.game-container {
+    border-radius: 34px;
+    box-shadow: 0 0.5rem 1rem var(--shadows);
+    overflow: hidden;
+}
+
+.grid {
+    background-color: var(--clr-4);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 8px;
+}
+
+.sq {
+    background-color: var(--general-bg);
+    height: 100px;
+    width: 100px;
+    display: grid;
+    place-items: center;
+}
+
+.icon {
+    fill: var(--clr-3);
+}
+
+
+/* MENU */
+.menu {
+    box-sizing: border-box;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 200px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--general-bg);
+    border: 3px solid var(--clr-4);
+    border-radius: .75rem;
+    box-shadow:  5px 5px 30px var(--shadows),
+             -5px -5px 30px var(--shadows);
+}
+
+.menu .buttons {
+    width: 100%;
+    align-self: flex-end;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu button {
+    border: none;
+    background-color: var(--clr-1);
+    box-shadow: 3px 3px 0px var(--clr-4);
+    border: 3px solid var(--clr-4);
+    font-weight: bold;
+    color: var(--clr-4);
+    padding: 10px 22px;
+    border-radius: 100px;
+    font-size: 1rem;
+}
+
+.menu button:active {
+    box-shadow: var(--clr-4) 2px 2px 0 0;
+    transform: translate(2px, 2px);
+}
+
+.menu button:hover {
+    background-color: var(--clr-0);
+    cursor: pointer;
+}
+
+.menu .title {
+    font-size: 2rem;
+    color: var(--text-1);
+}
+
+
+.menu .winner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-1);
+    font-size: 1.75rem;
+    gap: 10px;
+}
+
+.menu .winner svg {
+    height: 65px;
+    width: 65px;
+}
+
+
+/* SELECTOR */
+.selector.menu {
+    display: none;
+    height: 400px;
+    width: 400px;
+}
+
+.piezas {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 15px;
+    place-items: center;
+}
+
+.piezas .icon {
+    width: 60px;
+    height: 60px;
+}
+
+.piezas .piece-box {
+    transition: .25s;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.piezas .piece-box.active {
+    scale: 1.15;
+    box-shadow: 0 0 10px #376e6e;
+}
+
+.piezas .piece-box:hover {
+    scale: 1.15;
+    box-shadow: 0 0 10px #376e6e;
+}
+
+.piezas .piece-box:active {
+    scale: 1;
+}

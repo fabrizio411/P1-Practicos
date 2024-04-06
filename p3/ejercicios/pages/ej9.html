@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 5</title>
+  <link rel="stylesheet" href="../../css/resets.css">
+  <link rel="stylesheet" href="../../css/utils.css">
+  <link rel="stylesheet" href="../../css/forms.css">
+</head>
+<body class="center">
+
+  <form class="form">
+
+    <div class="input-container">
+      <select id="day">
+        <option selected disabled value="">Elejir Opción...</option>
+        <option value="lu">Lunes</option>
+        <option value="ma">Martes</option>
+        <option value="mi">Miercoles</option>
+        <option value="ju">Jueves</option>
+        <option value="vi">Viernes</option>
+        <option value="sa">Sábado</option>
+        <option value="do">Domingo</option>
+      </select>
+      <label for="day">Día</label>
+    </div>
+
+    <div class="input-container">
+      <input type="number" id="temp">
+      <label for="temp">Temperatura</label>
+    </div>
+
+    <button type="button" id="btn" class="btn">Evaluar</button>
+
+    <div id="result" class="result center margins"></div>
+
+  </form>
+  
+</body>
+<script src="../js/ej9.js"></script>
+</html>

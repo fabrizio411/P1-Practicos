@@ -85,8 +85,6 @@ function placePiece(square, position) {
 function checkWin(player, position) {
     let win = false
 
-    console.log(player)
-
     switch (position) {
         case 0: 
             if (piezasColocadas[1] === player && piezasColocadas[2] === player) {

@@ -1,28 +1,16 @@
 document.querySelector('#btn').addEventListener('click', displayResult)
 
 function displayResult() {
-    let millas = Number(document.querySelector('#millas').value)
-    let clPlus = document.querySelector('#clPlus').value
+    let val = Number(document.querySelector('#val').value)
 
-    document.querySelector('#millas').value = ''
-    document.querySelector('#clPlus').value = ''
+    document.querySelector('#val').value = ''
 
-    if (!millas || !clPlus) {
-        return
-    }
+    let i = val
+    let result = 0
 
-    let totalMillas = millas
-    if (clPlus === 's') {
-        totalMillas *= 2
-    }
-
-    let result = 'Millas insuficientes para viajar'
-    if (totalMillas > 60000) {
-        result = 'Europa'
-    } else if (totalMillas > 30000) {
-        result = 'América del Norte'
-    } else if (totalMillas > 15000) {
-        result = 'América del Sur'
+    while (i >= 1) {
+        result++
+        i /= 10
     }
     
     document.querySelector('#result').innerHTML = result

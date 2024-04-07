@@ -1,18 +1,14 @@
 document.querySelector('#btn').addEventListener('click', displayResult)
 
 function displayResult() {
-    let char = document.querySelector('#char').value
+    let val = Number(document.querySelector('#val').value)
 
-    document.querySelector('#char').value = ''
+    document.querySelector('#val').value = ''
 
-    if (!char) {
-        return
-    }
+    let result = 1
 
-    let result = 'No'
-    // Revisar si se hace asi
-    if ('aeiou'.includes(char)) {
-        result = 'Si'
+    for (let i = val; i > 0; i--) {
+        result *= i
     }
 
     document.querySelector('#result').innerHTML = result

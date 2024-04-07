@@ -22,3 +22,8 @@
 .hidden {
     display: none;
 }
+
+.contain {
+    max-width: 200px;
+    flex: 1;
+}

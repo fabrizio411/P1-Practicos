@@ -1,33 +1,22 @@
 document.querySelector('#btn').addEventListener('click', displayResult)
 
 function displayResult() {
-    let day = document.querySelector('#day').value
-    let temp = Number(document.querySelector('#temp').value)
+    let val1 = Number(document.querySelector('#val1').value)
+    let multiplicador = Number(document.querySelector('#multiplicador').value)
 
-    document.querySelector('#day').value = ''
-    document.querySelector('#temp').value = ''
+    document.querySelector('#val1').value = ''
+    document.querySelector('#multiplicador').value = ''
 
-    if (!day || !temp) {
-        return
+    let result = 0
+    let iterador = multiplicador / Math.abs(multiplicador)
+
+    for (let i = 0; i < multiplicador || i > multiplicador; i += iterador) {
+        if (iterador >= 0) {
+            result += val1
+        } else {
+            result -= val1
+        }
     }
-
-    let clothesChoice = 'Abrigo moderado'
-    if (temp < 10) {
-        clothesChoice = 'Abrigarse mucho'
-    } else if (temp > 20) {
-        clothesChoice = 'Ponerse ropa cómoda'
-    }
-
-    let isWorkDay = 'Ir al trabajo'
-    if (day === 'do') {
-        isWorkDay = 'Quedarse en casa, hoy no trabaja'
-    }
-
-    let result = `
-    <p>Levantarse</p>
-    <p>${clothesChoice}</p>
-    <p>${isWorkDay}</p>
-    `
 
     document.querySelector('#result').innerHTML = result
 }

@@ -1,17 +1,17 @@
 document.querySelector('#btn').addEventListener('click', displayResult)
 
 function displayResult() {
-    let val = number(document.querySelector('#val').value)
+    let val = Number(document.querySelector('#val').value)
 
     document.querySelector('#val').value = ''
 
-    if (!val) {
+    if (!val || val < 2 || val > 50) {
         return
     }
 
-    let result = 'NO CUMPLE'
-    if (val < -20 || val > 20) {
-        result = 'CUMPLE'
+    let result = ''
+    for (let i = 1; i <= val; i++) {
+        result += '-'
     }
 
     document.querySelector('#result').innerHTML = result

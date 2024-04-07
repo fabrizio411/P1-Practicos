@@ -13,27 +13,21 @@
   <form class="form">
 
     <div class="input-container">
-      <select id="day">
-        <option selected disabled value="">Elejir Opción...</option>
-        <option value="lu">Lunes</option>
-        <option value="ma">Martes</option>
-        <option value="mi">Miercoles</option>
-        <option value="ju">Jueves</option>
-        <option value="vi">Viernes</option>
-        <option value="sa">Sábado</option>
-        <option value="do">Domingo</option>
-      </select>
-      <label for="day">Día</label>
+      <input type="number" id="val1">
+      <label for="val1">Valor 1</label>
     </div>
 
     <div class="input-container">
-      <input type="number" id="temp">
-      <label for="temp">Temperatura</label>
+      <input type="number" id="multiplicador">
+      <label for="multiplicador">Valor 2</label>
     </div>
 
-    <button type="button" id="btn" class="btn">Evaluar</button>
+    <button type="button" id="btn" class="btn">Multiplicar</button>
 
-    <div id="result" class="result center margins"></div>
+    <div class="center">
+      <p>Resultado:</p>
+      <p id="result" class="result contain"></p>
+    </div>
 
   </form>
   

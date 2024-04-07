@@ -1,18 +1,5 @@
-document.querySelector('#btn').addEventListener('click', displayResult)
-
-function displayResult() {
-    let val = Number(document.querySelector('#val').value)
-
-    document.querySelector('#val').value = ''
-
-    if (!val) {
-        return
+for (let i = 1; i <= 450; i++) {
+    if (i % 5 === 0) {
+        console.log(i)
     }
-
-    let result = 'No'
-    if (val > 10 && val < 20) {
-        result = 'Si'
-    }
-
-    document.querySelector('#result').innerHTML = result
 }

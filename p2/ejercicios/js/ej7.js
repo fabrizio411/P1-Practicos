@@ -1,7 +1,7 @@
 document.querySelector('#btn').addEventListener('click', displayResult)
 
 function displayResult() {
-    let val = number(document.querySelector('#val').value)
+    let val = Number(document.querySelector('#val').value)
 
     document.querySelector('#val').value = ''
 

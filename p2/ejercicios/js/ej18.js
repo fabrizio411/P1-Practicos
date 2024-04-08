@@ -9,12 +9,9 @@ function displayResult() {
     document.querySelector("#val").value = ''
     document.querySelector("#val").focus()
     
-    if (!val || count >= 6) {
-        return
-    }
-
     count++
-    if (count >= 6) {
+    
+    if (count > 6) {
         document.querySelector('#message').innerHTML = 'Ya se ingresaron 6 valores'
         return
     }

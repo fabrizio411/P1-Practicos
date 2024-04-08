@@ -7,10 +7,6 @@ function displayResult() {
     document.querySelector('#val1').value = ''
     document.querySelector('#val2').value = ''
 
-    if (!val1 || !val2) {
-        return
-    }
-
     let result = ''
 
     if (val1 < val2) {

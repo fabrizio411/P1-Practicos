@@ -9,11 +9,6 @@ function displayResult() {
     document.querySelector('#val2').value = ''
     document.querySelector('#operacion').value = ''
     
-
-    if (!val1 || !val2 || !operacion) {
-        return
-    }
-
     let result = val1
     if (operacion === 's') {
         result += val2

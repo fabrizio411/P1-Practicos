@@ -16,24 +16,22 @@ function displayResult() {
     document.querySelector("#aceite").value = ''
     document.querySelector("#agua").value = ''
     
-    if (!userAzucar || !userAceite || !userHarina || !userAgua) {
-        return
-    }
-
     let cantAzucar = Math.floor(userAzucar / azucar)
     let cantHarina = Math.floor(userHarina / harina)
     let cantAceite = Math.floor(userAceite / aceite)
     let cantAgua = Math.floor(userAgua / agua)
 
-    let result = 0
+    let minRecetas = cantAzucar
 
-    if (cantAzucar >= 1 
-        && cantHarina >= 1 
-        && cantAceite >= 1 
-        && cantAgua >= 1) 
-    {
-        result = Math.min(cantAzucar, cantHarina, cantAceite, cantAgua)
+    if (cantHarina < minRecetas) {
+        minRecetas = cantHarina 
+    }
+    if (cantAceite < minRecetas) {
+        minRecetas = cantAceite
+    }
+    if (cantAgua < minRecetas) {
+        minRecetas = cantAgua
     }
 
-    document.querySelector('#result').innerHTML = result
+    document.querySelector('#result').innerHTML = minRecetas
 }

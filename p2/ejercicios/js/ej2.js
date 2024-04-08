@@ -5,10 +5,6 @@ function displayResult() {
 
     document.querySelector('#val').value = ''
 
-    if (!val) {
-        return
-    }
-
     let result = ''
     if (val > 10) {
         result = 'Mayor que diez'

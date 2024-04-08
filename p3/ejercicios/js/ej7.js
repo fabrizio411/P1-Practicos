@@ -5,7 +5,7 @@ function displayResult() {
 
     document.querySelector('#val').value = ''
 
-    if (!val || val < 2 || val > 50) {
+    if (val < 2 || val > 50) {
         return
     }
 

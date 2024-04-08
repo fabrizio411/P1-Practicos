@@ -11,11 +11,8 @@ function displayResult() {
     document.querySelector("#val").value = ''
     document.querySelector("#val").focus()
     
-    if (!val) {
-        return
-    }
-
     count++
+    
     if (count >= 5) {
         document.querySelector('#message').innerHTML = 'Ya se ingresaron 5 valores'
         return

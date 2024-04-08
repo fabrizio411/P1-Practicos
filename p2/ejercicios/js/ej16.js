@@ -9,10 +9,6 @@ function displayResult() {
     document.querySelector("#b").value = ''
     document.querySelector("#c").value = ''
     
-    if (!a || !b || !c) {
-        return
-    }
-
     if (a > b && a > c) {
         document.querySelector('#result').innerHTML = "A es el mayor de todos"
     }

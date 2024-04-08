@@ -52,7 +52,7 @@ function displayResult() {
     document.querySelector('#name').value = ''
     document.querySelector('#cant').value = ''
 
-    if (!clientName || !cantUnidades) {
+    if (!clientName) {
         return
     }
     

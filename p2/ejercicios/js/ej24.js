@@ -9,10 +9,6 @@ function displayResult() {
 
     document.querySelector('#sueldo').value = ''
 
-    if (!sueldo) {
-        return
-    }
-
     if (sueldo < minSueldo || minSueldo === 0) {
         minSueldo = sueldo
     }

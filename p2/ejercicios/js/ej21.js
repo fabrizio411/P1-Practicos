@@ -6,10 +6,6 @@ function displayResult() {
 
     document.querySelector('#ingresos').value = ''
 
-    if (!ingresos) {
-        return
-    }
-
     let primerPago
     let cuotas
 

@@ -7,10 +7,6 @@ function displayResult() {
     document.querySelector('#noches').value = ''
     document.querySelector('#metodoPago').value = ''
 
-    if (!noches || !metodoPago) {
-        return
-    }
-
     let montoTotal
     montoTotal = noches * 40
     

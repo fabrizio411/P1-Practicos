@@ -30,10 +30,6 @@ function getNumJ1() {
 
     messageDOM.innerHTML = ''
 
-    if (!numJ1) {
-        return
-    }
-
     if (numJ1 < 1 || numJ1 > 100) {
         messageDOM.innerHTML = 'El número debe ser entre 1 y 100'
         return

@@ -5,10 +5,6 @@ function displayResult() {
 
     document.querySelector('#val').value = ''
 
-    if (!val) {
-        return
-    }
-
     let result = val
     if (val < 0) {
         result = val * -1

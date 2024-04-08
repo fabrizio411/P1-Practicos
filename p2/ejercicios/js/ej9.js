@@ -7,10 +7,6 @@ function displayResult() {
     document.querySelector('#day').value = ''
     document.querySelector('#temp').value = ''
 
-    if (!day || !temp) {
-        return
-    }
-
     let clothesChoice = 'Abrigo moderado'
     if (temp < 10) {
         clothesChoice = 'Abrigarse mucho'

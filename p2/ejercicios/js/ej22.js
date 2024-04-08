@@ -7,10 +7,6 @@ function displayResult() {
     document.querySelector('#montoTotal').value = ''
     document.querySelector('#targeta').value = ''
 
-    if (!montoTotal || !targeta) {
-        return
-    }
-
     let result = montoTotal
 
     if (targeta === 's' && montoTotal < 10000) {

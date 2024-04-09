@@ -1,15 +1,25 @@
 document.querySelector('#btn').addEventListener('click', displayResult)
 
 function displayResult() {
-    let a = Number(document.querySelector("#a").value)
+    let val = Number(document.querySelector("#val").value)
+    let divisor = Number(document.querySelector("#divisor").value)
 
-    document.querySelector("#a").value = ''
+    document.querySelector("#val").value = ''
+    document.querySelector("#divisor").value = ''
+
+    let resto
+    let result = 0
+
+    for (let i = Math.abs(val); i >= Math.abs(divisor); i -= Math.abs(divisor)) {
+        result++
+    }
+
+    if ((val < 0 && divisor >= 0) || (divisor < 0 && val >= 0)) {
+        result *= -1
+    }
+
+    resto = val - (result * divisor)
+
+    document.querySelector('#result').innerHTML = `${result}<br>${resto}`
     
-    if (!a) {
-        return
-    }
-
-    if (!(a >= 0 && a <= 10)) {
-        document.querySelector('#result').innerHTML = "A está fuera de rango"
-    }
 }

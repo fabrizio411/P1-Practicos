@@ -78,10 +78,6 @@ function placePiece(square, position) {
     }
 }
 
-
-
-
-
 function checkWin(player, position) {
     let win = false
 

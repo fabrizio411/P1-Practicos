@@ -80,7 +80,6 @@ function confirmHandle() {
 
 }
 
-
 // Constantes y variables generales
 const board = document.querySelector('#board')
 const boardHTML = board.innerHTML

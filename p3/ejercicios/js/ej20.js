@@ -6,34 +6,19 @@ let agua = 1
 document.querySelector('#btn').addEventListener('click', displayResult)
 
 function displayResult() {
-    let userAzucar = Number(document.querySelector("#azucar").value)
-    let userHarina = Number(document.querySelector("#harina").value)
-    let userAceite = Number(document.querySelector("#aceite").value)
-    let userAgua = Number(document.querySelector("#agua").value)
+    let val1 = Number(document.querySelector("#val1").value)
+    let val2 = Number(document.querySelector("#val2").value)
 
-    document.querySelector("#azucar").value = ''
-    document.querySelector("#harina").value = ''
-    document.querySelector("#aceite").value = ''
-    document.querySelector("#agua").value = ''
-    
-    if (!userAzucar || !userAceite || !userHarina || !userAgua) {
-        return
+    document.querySelector("#val1").value = ''
+    document.querySelector("#val2").value = ''
+
+    let next
+
+    while (val2 > 0) {
+        next = val2 
+        val2 = val1 % val2
+        val1 = next
     }
 
-    let cantAzucar = Math.floor(userAzucar / azucar)
-    let cantHarina = Math.floor(userHarina / harina)
-    let cantAceite = Math.floor(userAceite / aceite)
-    let cantAgua = Math.floor(userAgua / agua)
-
-    let result = 0
-
-    if (cantAzucar >= 1 
-        && cantHarina >= 1 
-        && cantAceite >= 1 
-        && cantAgua >= 1) 
-    {
-        result = Math.min(cantAzucar, cantHarina, cantAceite, cantAgua)
-    }
-
-    document.querySelector('#result').innerHTML = result
+    document.querySelector('#result').innerHTML = val1
 }

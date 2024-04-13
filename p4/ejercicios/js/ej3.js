@@ -1,3 +1,9 @@
-for (let i = 40; i >= 10; i--) {
-    console.log(i)
+document.querySelector('#btn').addEventListener('click', displayResult)
+
+function displayResult() {
+    let texto = document.querySelector('#texto').value
+
+    document.querySelector('#texto').value = ''
+
+    document.querySelector('#result').innerHTML = texto.toUpperCase()
 }

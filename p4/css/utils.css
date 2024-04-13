@@ -26,4 +26,5 @@
 .contain {
     max-width: 200px;
     flex: 1;
+    text-align: center;
 }

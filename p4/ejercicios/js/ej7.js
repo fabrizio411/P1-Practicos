@@ -1,18 +1,13 @@
 document.querySelector('#btn').addEventListener('click', displayResult)
 
 function displayResult() {
-    let val = Number(document.querySelector('#val').value)
+    let text = document.querySelector('#text').value
 
-    document.querySelector('#val').value = ''
+    document.querySelector('#text').value = ''
 
-    if (val < 2 || val > 50) {
-        return
-    }
+    let newText = text.toLowerCase()
 
-    let result = ''
-    for (let i = 1; i <= val; i++) {
-        result += '-'
-    }
+    newText = newText[0].toUpperCase() + newText.substring(1)
 
-    document.querySelector('#result').innerHTML = result
+    document.querySelector('#result').innerHTML = newText
 }

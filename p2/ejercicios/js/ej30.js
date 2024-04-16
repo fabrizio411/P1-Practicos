@@ -103,16 +103,13 @@ function menuHandler() {
 
     // Winner display
     const winDisplay = document.querySelector('#winner')
-    if (winner) {
-        winDisplay.style.display = 'flex'
-    } else {
-        winDisplay.style.display = 'none'
-    }
 
     if (winner && winner === 'X') {
-        winDisplay.innerHTML = `${player1} Es el ganador`
+        winDisplay.innerHTML = `${crossIcon} Es el ganador`
     } else if (winner === 'O') {
-        winDisplay.innerHTML = `${player2} Es el ganador`
+        winDisplay.innerHTML = `${circleIcon} Es el ganador`
+    } else {
+        winDisplay.innerHTML = 'Empate'
     }
 }
 

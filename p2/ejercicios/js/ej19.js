@@ -13,7 +13,7 @@ function displayResult() {
     
     count++
     
-    if (count >= 5) {
+    if (count > 5) {
         document.querySelector('#message').innerHTML = 'Ya se ingresaron 5 valores'
         return
     }

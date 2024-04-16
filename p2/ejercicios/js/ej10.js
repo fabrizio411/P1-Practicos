@@ -9,7 +9,7 @@ function displayResult() {
 
     let result = val1 - val2
     if (val1 < val2) {
-        result = val2 - val2
+        result = val2 - val1
     }
 
     document.querySelector('#result').innerHTML = result

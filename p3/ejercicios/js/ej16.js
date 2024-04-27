@@ -7,23 +7,20 @@ function displayResult() {
     document.querySelector("#val1").value = ''
     document.querySelector("#val2").value = ''
 
-    let result = 0
+    let result = null
     let i = val1
 
-    if (val1 < val2) {
-        while (i <= val2 && result === 0) {
-            if (i % 4 === 0 && i % 6 === 0) {
-                result = i
-            }
-            i++
+    if (val2 < val1) {
+        let aux = val2
+        val2 = val1
+        val1 = aux
+    }
+
+    while (i <= val2 && result === null) {
+        if (i % 4 === 0 && i % 6 === 0) {
+            result = i
         }
-    } else {
-        while (i >= val2 && result === 0) {
-            if (i % 4 === 0 && i % 6 === 0) {
-                result = i
-            }
-            i--
-        }
+        i++
     }
 
     document.querySelector('#result').innerHTML = result

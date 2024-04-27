@@ -9,18 +9,15 @@ function displayResult() {
 
     let result = ''
 
-    if (val1 < val2) {
-        for (let i = val1; i <= val2; i++) {
-            result += i + ' '
-        }
-    } else if (val2 < val1) {
-        for (let i = val1; i >= val2; i--) {
-            result += i + ' '
-        }
-
-    } else {
-        result = 'Números Iguales'
+    if (val2 < val1) {
+        let aux = val2
+        val2 = val1
+        val1 = aux
     }
-    
+
+    for (let i = val1; i <= val2; i++) {
+        result += i + ' '
+    }
+
     document.querySelector('#result').innerHTML = result
 }

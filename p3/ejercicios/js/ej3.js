@@ -1,3 +1,7 @@
+let result = ''
 for (let i = 40; i >= 10; i--) {
-    console.log(i)
+    result += i + '<br>'
+
 }
+
+document.querySelector('#result').innerHTML = result

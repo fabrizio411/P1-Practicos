@@ -13,20 +13,15 @@
   <form class="form">
 
     <div class="input-container">
-      <input type="number" id="val1">
-      <label for="val1">Valor 1</label>
-    </div>
-
-    <div class="input-container">
-      <input type="number" id="val2">
-      <label for="val2">Valor 2</label>
+      <input type="text" id="text">
+      <label for="text">Ingresar un texto</label>
     </div>
 
     <button type="button" id="btn" class="btn">Ingresar</button>
 
-    <div class="center">
-      <p>Resultado:</p>
-      <p id="result" class="result contain"></p>
+    <div class="center" style="display: flex; flex-direction: row; gap: 20px;">
+      <p class="center">Minúsculas: <span id="minRes" class="result"></span></p>
+      <p class="center">Mayúsculas: <span id="mayRes" class="result"></span></p>
     </div>
 
   </form>

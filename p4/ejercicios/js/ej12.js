@@ -1,15 +1,14 @@
 document.querySelector('#btn').addEventListener('click', displayResult)
 
 function displayResult() {
-    let val = Number(document.querySelector('#val').value)
+    let texto = document.querySelector('#text').value
 
-    document.querySelector('#val').value = ''
+    let result = ''
 
-    let result = 1
-
-    for (let i = val; i > 0; i--) {
-        result *= i
+    for (let i = texto.length - 1; i >= 0; i--) {
+        result += texto[i]
     }
+
 
     document.querySelector('#result').innerHTML = result
 }

@@ -1,17 +1,15 @@
 document.querySelector('#btn').addEventListener('click', displayResult)
 
 function displayResult() {
-    let val1 = Number(document.querySelector('#val1').value)
-    let val2 = Number(document.querySelector('#val2').value)
+    let texto = document.querySelector('#text').value
 
-    document.querySelector('#val1').value = ''
-    document.querySelector('#val2').value = ''
+    let suma = 0
 
-    let result = 1
-    
-    for (let i = val1; i <= val2; i++) {
-        result *= i
+    for (let i = 0; i < texto.length; i++) {
+        if ( !isNaN(Number(texto[i])) ) {
+            suma += Number(texto[i])
+        }
     }
 
-    document.querySelector('#result').innerHTML = result
+    document.querySelector('#result').innerHTML = suma
 }

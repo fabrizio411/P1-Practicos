@@ -1,26 +1,23 @@
 document.querySelector('#btn').addEventListener('click', displayResult)
 
 function displayResult() {
-    let val1 = Number(document.querySelector('#val1').value)
-    let val2 = Number(document.querySelector('#val2').value)
+    let texto = document.querySelector('#text').value
 
-    document.querySelector('#val1').value = ''
-    document.querySelector('#val2').value = ''
+    let mayusuclas = 0
+    let minusculas = 0
 
-    let result = ''
-
-    if (val1 < val2) {
-        for (let i = val1; i <= val2; i++) {
-            result += i + ' '
+    for (let i = 0; i < texto.length; i++) {
+        if (texto[i] !== ' ') {
+            charCode = texto.charCodeAt(i)
+            if (charCode <= 90 && charCode >= 65) {
+                mayusuclas++
+            } else {
+                minusculas++
+            }
         }
-    } else if (val2 < val1) {
-        for (let i = val1; i >= val2; i--) {
-            result += i + ' '
-        }
-
-    } else {
-        result = 'Números Iguales'
     }
     
-    document.querySelector('#result').innerHTML = result
+    
+    document.querySelector('#mayRes').innerHTML = mayusuclas
+    document.querySelector('#minRes').innerHTML = minusculas
 }

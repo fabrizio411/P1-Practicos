@@ -1,30 +1,23 @@
 document.querySelector('#btn').addEventListener('click', displayResult)
 
 function displayResult() {
-    let val1 = Number(document.querySelector('#val1').value)
-    let val2 = Number(document.querySelector('#val2').value)
-    let multiplo = Number(document.querySelector('#multiplo').value)
+    let texto = document.querySelector('#text').value
 
-    document.querySelector('#val1').value = ''
-    document.querySelector('#val2').value = ''
-    document.querySelector('#multiplo').value = ''
+    for (let i = 0; i < texto.length; i++) {
+        let char = texto[i].toLowerCase()
 
-    let result = ''
-
-    if (val1 < val2) {
-        for (let i = val1; i <= val2; i++) {
-            if (i % multiplo === 0) {
-                result += i + ' '
-            }
-        }
-    } else {
-        console.log(val2, val1, multiplo)
-        for (let i = val1; i >= val2; i--) {
-            if (i % multiplo === 0) {
-                result += i + ' '
-            }
+        if (char === 'a') {
+            texto = texto.substring(0, i) + '4' + texto.substring(i + 1)
+        } else if (char === 'e') {
+            texto = texto.substring(0, i) + '3' + texto.substring(i + 1)
+        } else if (char === 'i') {
+            texto = texto.substring(0, i) + '1' + texto.substring(i + 1)
+        } else if (char === 'o') {
+            texto = texto.substring(0, i) + '0' + texto.substring(i + 1)
+        } else if (char === 'u') {
+            texto = texto.substring(0, i) + '8' + texto.substring(i + 1)
         }
     }
 
-    document.querySelector('#result').innerHTML = result
+    document.querySelector('#result').innerHTML = texto
 }

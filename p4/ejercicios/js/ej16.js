@@ -1,30 +1,38 @@
 document.querySelector('#btn').addEventListener('click', displayResult)
 
 function displayResult() {
-    let val1 = Number(document.querySelector("#val1").value)
-    let val2 = Number(document.querySelector("#val2").value)
+    let texto = document.querySelector('#text').value.toLowerCase()
 
-    document.querySelector("#val1").value = ''
-    document.querySelector("#val2").value = ''
+    let newTexto = ''
+    let reversedTexto = ''
 
-    let result = 0
-    let i = val1
-
-    if (val1 < val2) {
-        while (i <= val2 && result === 0) {
-            if (i % 4 === 0 && i % 6 === 0) {
-                result = i
+    for (let i = 0; i < texto.length;  i++) {
+        if (texto[i] !== ' ' && texto[i] !== ',' && texto[i] !== '.') {
+            if (texto[i] === 'á') {
+                newTexto += 'a'
+            } else if (texto[i] === 'é') {
+                newTexto += 'e'
+            } else if (texto[i] === 'í') {
+                newTexto += 'i'
+            } else if (texto[i] === 'ó') {
+                newTexto += 'o'
+            } else if (texto[i] === 'ú') {
+                newTexto += 'u'
+            } else {
+                newTexto += texto[i]
             }
-            i++
-        }
-    } else {
-        while (i >= val2 && result === 0) {
-            if (i % 4 === 0 && i % 6 === 0) {
-                result = i
-            }
-            i--
         }
     }
 
+    for (let i = newTexto.length - 1; i >= 0; i--) {
+        reversedTexto += newTexto[i]
+    }
+
+
+    let result = 'NO es Palindomo'
+    if (newTexto === reversedTexto) {
+        result = 'Es Palindomo'
+    }
+    
     document.querySelector('#result').innerHTML = result
 }

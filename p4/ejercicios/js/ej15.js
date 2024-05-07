@@ -1,20 +1,21 @@
 document.querySelector('#btn').addEventListener('click', displayResult)
 
 function displayResult() {
-    let val = Number(document.querySelector('#val').value)
+    let texto = document.querySelector('#text').value.toLowerCase()
 
-    document.querySelector('#val').value = ''
-    document.querySelector('#mensaje').innerHTML = ''
-
-    if (val < 2000) {
-        document.querySelector('#mensaje').innerHTML = 'Ingresar un N° mayor a 2000'
-        return
+    let aIndex
+    let aCounter = 0
+    
+    for (let i = texto.length - 1; i >= 0 && aCounter < 2; i--) {
+        if (texto[i] === 'a') {
+            aIndex = i
+            aCounter++
+        }
     }
 
-    let i = val
-    while (i >= 100) {
-        i /= 20
+    if (aCounter === 1 || aCounter === 0) {
+        aIndex = -1
     }
     
-    document.querySelector('#result').innerHTML = i
+    document.querySelector('#result').innerHTML = aIndex
 }

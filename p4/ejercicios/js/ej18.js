@@ -1,17 +1,25 @@
 document.querySelector('#btn').addEventListener('click', displayResult)
 
 function displayResult() {
-    let val = Number(document.querySelector("#val").value)
+    let year = Number(document.querySelector("#year").value)
 
-    document.querySelector("#val").value = ''
+    document.querySelector("#year").value = ''
 
-    let result = ''
+    let result = 'No es bisiesto'
+    if (anioBisiesto(year)) {
+        result = 'Es bisiesto'
+    }
     
-    for (let i = 30; i <= 200; i++) {
-        if (i % val === 0) {
-            result += i + ' '
+    document.querySelector('#result').innerHTML = result
+}
+
+function anioBisiesto(year) {
+    let esBisiesto = false
+
+    if (year % 4 === 0) {
+        if (year % 100 !== 0 && year % 400 !== 0) {
+            esBisiesto = true
         }
     }
-
-    document.querySelector('#result').innerHTML = result
+    return esBisiesto
 }

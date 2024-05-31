@@ -12,5 +12,5 @@ function displayResult() {
 
 function celsiusToFarenheit(temperatura) {
     let farenheit = 1.8 * temperatura + 32 
-    return Math.round(temperatura)
+    return Math.round(farenheit)
 }

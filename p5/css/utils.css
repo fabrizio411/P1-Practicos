@@ -1,0 +1,39 @@
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.f-row {
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.margins {
+    margin: 1rem 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.contain {
+    max-width: 200px;
+    flex: 1;
+    text-align: center;
+}
+
+table {
+    text-align: center;
+    gap: 5px;
+}
+
+td {
+    padding: 5px 10px;
+}

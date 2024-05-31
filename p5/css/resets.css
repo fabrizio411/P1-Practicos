@@ -1,0 +1,30 @@
+/* RESETS */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap');
+
+:root {
+    --shadows: rgba(0,0,0,.15);
+    --general-bg: #dde1e5;
+    --bg: #FFFFFF;
+    --bg-2: #ebebeb;
+    --text-1: rgb(49, 49, 49);
+    --text-2: rgb(83, 83, 83);
+    --text-3: rgb(100, 100, 100);
+    --clr-hr: rgb(177, 177, 177);
+    --clr-0: #e5ecfc;
+    --clr-1: #d0d7eb;
+    --clr-2: #9daddf;
+    --clr-3: #7d8ec4;
+    --clr-4: #6171a9;
+}
+
+html, body {
+    min-height: 100vh;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    font-family: "Ubuntu", sans-serif;
+    box-sizing: border-box;
+}

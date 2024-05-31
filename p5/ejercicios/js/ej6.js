@@ -3,6 +3,7 @@ let textos = []
 
 function ingresarTexto() {
     let texto = document.querySelector('#texto').value
+    document.querySelector('#texto').value = ''
 
     textos.push(texto)
 
@@ -12,6 +13,7 @@ function ingresarTexto() {
 document.querySelector('#btnMostrar').addEventListener('click', eliminarTexto)
 function eliminarTexto() {
     let texto = document.querySelector('#texto').value
+    document.querySelector('#texto').value = ''
 
     let eliminado = false
     let mensaje = ''
@@ -21,6 +23,7 @@ function eliminarTexto() {
         if (txt === texto) {
             textos.splice(i, 1)
             eliminado = true
+            break
         }
     }
 

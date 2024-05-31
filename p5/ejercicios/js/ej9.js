@@ -1,16 +1,16 @@
 class Sistema {
     constructor() {
         this.partidos = [
-            new Partido('A', 391000),
-            new Partido('B', 311000),
-            new Partido('C', 184000),
-            new Partido('D', 73000),
-            new Partido('E', 27000),
-            new Partido('F', 12000),
-            new Partido('G', 2000),
+            // new Partido('A', 391000),
+            // new Partido('B', 311000),
+            // new Partido('C', 184000),
+            // new Partido('D', 73000),
+            // new Partido('E', 27000),
+            // new Partido('F', 12000),
+            // new Partido('G', 2000),
         ]
-        this.totalVotos = 1000000
-        this.escanios = 21
+        this.totalVotos = 0
+        this.escanios = null
     }
 
     creatPartido(nombre, votos) {
@@ -33,17 +33,38 @@ class Partido {
 
 const sistema = new Sistema()
 
+document.querySelector('#btnEscanios').addEventListener('click', guardarEscanios)
+function guardarEscanios() {
+    let escanios = Number(document.querySelector('#escanios').value)
+
+    if (escanios !== '' && !isNaN(escanios)) {
+        sistema.escanios = escanios
+        document.querySelector('#escanios-box').style.display = 'none'
+    }
+}
+
 document.querySelector('#btn').addEventListener('click', procesarDatos)
 function procesarDatos() {
     let nombre = document.querySelector('#nombre').value
     let votos = Number(document.querySelector('#votos').value)
 
     sistema.creatPartido(nombre, votos)
+
+    document.querySelector('#nombre').value = ''
+    document.querySelector('#votos').value = ''
 }
 
-armarTabla()
-
+document.querySelector('#btnMostrar').addEventListener('click', armarTabla)
 function armarTabla() {
+    let tablaHTML = `
+    <thead>
+        <td>Partido</td>
+        <td>Escanios</td>
+    </thead>
+    
+    `
+
+
     let cociente = Math.round(sistema.totalVotos / sistema.escanios)
     let escaniosUsados = 0
 
@@ -93,5 +114,7 @@ function armarTabla() {
         `
     }
 
-    document.querySelector('#tableData').innerHTML = dataHTML
+    tablaHTML += `<tbody>${dataHTML}</tbody>`
+
+    document.querySelector('#tableData').innerHTML = tablaHTML
 }

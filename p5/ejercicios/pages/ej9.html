@@ -12,6 +12,14 @@
 
   <form class="form">
 
+    <div class="sub-form" id="escanios-box">
+      <div class="input-container">
+        <input type="text" id="escanios">
+        <label for="escanios">Escanios</label>
+      </div>
+      <button type="button" class="btn" id="btnEscanios">Guardar</button>
+    </div>
+
     <div class="input-container">
       <input type="text" id="nombre">
       <label for="nombre">Nombre del partido</label>
@@ -22,15 +30,10 @@
     </div>
 
     <button type="button" id="btn" class="btn">Ingresar</button>
+    <button type="button" id="btnMostrar" class="btn">Mostrar Resultado</button>
 
-    <table>
-      <thead>
-        <td>Partido</td>
-        <td>Escanios</td>
-      </thead>
-      <tbody id="tableData">
-
-      </tbody>
+    <table id="tableData">
+      
     </table>
 
   </form>

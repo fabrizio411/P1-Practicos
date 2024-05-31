@@ -70,6 +70,7 @@ function armarTabla() {
     let peliculas = 0
     let dataHTML = ''
 
+
     for (let i = 0; i < sistema.peliculas.length; i++) {
         const pelicula = sistema.peliculas[i];
         let promedio = pelicula.puntos / pelicula.votantes
@@ -85,9 +86,12 @@ function armarTabla() {
             </tr>
             `
         }
+        console.log(pelicula)
+
     }
 
     tablaHTML += `<tbody>${dataHTML}</tbody>`
+
 
     if (peliculas > 0) {
         document.querySelector('#tabla').innerHTML = tablaHTML
@@ -170,7 +174,7 @@ function buscarPelicula() {
         Año: ${pelicula.anio}<br>
         Genero: ${genero.nombre}<br>
         Apta para: ${genero.edad} años<br>
-        Promedio de votos: ${pelicula.puntos / pelicula.votantes} años<br>
+        Promedio de votos: ${pelicula.puntos / pelicula.votantes}<br>
         `
     }
 
